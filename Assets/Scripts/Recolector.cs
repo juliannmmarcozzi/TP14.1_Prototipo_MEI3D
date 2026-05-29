@@ -6,6 +6,8 @@ public class Recolector : MonoBehaviour
 {
     int contador = 0;
 
+    public UIManager ui;
+
     void OnTriggerEnter(Collider objeto)
     {
         if(objeto.tag == "Coleccionable")
@@ -13,6 +15,8 @@ public class Recolector : MonoBehaviour
             Destroy(objeto.gameObject);
 
             contador = contador + 1;
+
+            ui.UpdateScore(contador);
 
             Debug.Log(contador);
         }
