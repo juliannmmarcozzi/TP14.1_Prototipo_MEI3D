@@ -6,7 +6,11 @@ public class Recolector : MonoBehaviour
 {
     int contador = 0;
 
+    public int totalPendrives = 2; // cantidad total en la escena
+
     public UIManager ui;
+
+    public bool gano = false;
 
     void OnTriggerEnter(Collider objeto)
     {
@@ -14,11 +18,15 @@ public class Recolector : MonoBehaviour
         {
             Destroy(objeto.gameObject);
 
-            contador = contador + 1;
+            contador++;
 
             ui.UpdateScore(contador);
 
-            Debug.Log(contador);
+            if(contador >= totalPendrives)
+            {
+                gano = true;
+                ui.ShowWinMessage();
+            }
         }
     }
 }

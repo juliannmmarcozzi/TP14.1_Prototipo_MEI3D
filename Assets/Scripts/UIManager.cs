@@ -17,4 +17,12 @@ public class UIManager : MonoBehaviour
     {
         timerText.text = "00:" + (int)timer;
     }
+    public void ShowLoseMessage()
+    {
+    timerText.text = "PERDISTE";
+    }
+    public void ShowWinMessage()
+    {
+    timerText.text = "GANASTE";
+    }
 }
