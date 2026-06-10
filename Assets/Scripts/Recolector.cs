@@ -6,15 +6,13 @@ public class Recolector : MonoBehaviour
 {
     int contador = 0;
 
-    public int totalPendrives = 2; // cantidad total en la escena
-
     public UIManager ui;
 
-    public bool gano = false;
+    public int puntajeMaximo = 2;
 
     void OnTriggerEnter(Collider objeto)
     {
-        if(objeto.tag == "Coleccionable")
+        if (objeto.tag == "Coleccionable")
         {
             Destroy(objeto.gameObject);
 
@@ -22,11 +20,14 @@ public class Recolector : MonoBehaviour
 
             ui.UpdateScore(contador);
 
-            if(contador >= totalPendrives)
+            if (contador >= puntajeMaximo)
             {
-                gano = true;
-                ui.ShowWinMessage();
+                ui.MostrarPantallaWin();
+
+                Time.timeScale = 0;
             }
+
+            Debug.Log(contador);
         }
     }
 }

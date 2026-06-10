@@ -8,6 +8,9 @@ public class UIManager : MonoBehaviour
     public TextMeshProUGUI scoreText;
     public TextMeshProUGUI timerText;
 
+    public GameObject panelWin;
+    public GameObject panelGameOver;
+
     public void UpdateScore(int score)
     {
         scoreText.text = "Score: " + score;
@@ -17,12 +20,14 @@ public class UIManager : MonoBehaviour
     {
         timerText.text = "00:" + (int)timer;
     }
-    public void ShowLoseMessage()
+
+    public void MostrarPantallaWin()
     {
-    timerText.text = "PERDISTE";
+        panelWin.SetActive(true);
     }
-    public void ShowWinMessage()
+
+    public void MostrarPantallaGameOver()
     {
-    timerText.text = "GANASTE";
+        panelGameOver.SetActive(true);
     }
 }

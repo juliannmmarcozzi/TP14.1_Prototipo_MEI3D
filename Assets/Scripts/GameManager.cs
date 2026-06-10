@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -8,32 +9,38 @@ public class GameManager : MonoBehaviour
 
     public UIManager ui;
 
-    public Recolector recolector;
+    bool juegoTerminado = false;
 
-    bool gameOver = false;
+    void Start()
+    {
+        Time.timeScale = 1;
+    }
 
     void Update()
     {
-        if (gameOver)
-            return;
-
-        if (recolector.gano)
+        if (!juegoTerminado)
         {
-            gameOver = true;
-            ui.ShowWinMessage();
-            return;
+            timer -= Time.deltaTime;
+
+            ui.UpdateTimer(timer);
+
+            if (timer <= 0)
+            {
+                timer = 0;
+
+                ui.UpdateTimer(timer);
+
+                ui.MostrarPantallaGameOver();
+
+                juegoTerminado = true;
+
+                Time.timeScale = 0;
+            }
         }
 
-        timer -= Time.deltaTime;
-
-        if (timer <= 0)
+        if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
         {
-            timer = 0;
-            gameOver = true;
-            ui.ShowLoseMessage();
-            return;
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
-
-        ui.UpdateTimer(timer);
     }
 }
