@@ -32,7 +32,17 @@ ModelImporter:
     4300004: Cube.002
     4300006: Cube.003
     4300008: Cube.004
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Mesa
+    second: {fileID: 2100000, guid: a6c0b0f97d4c4004995015672830e9f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: No Name
+    second: {fileID: 2100000, guid: 4abf00430a47ea943be126192f3b7fef, type: 2}
   materials:
     importMaterials: 1
     materialName: 0

@@ -319,7 +319,7 @@ GameObject:
   - component: {fileID: 119065646}
   - component: {fileID: 119065645}
   m_Layer: 0
-  m_Name: Cube (18)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -654,7 +654,7 @@ GameObject:
   - component: {fileID: 292247198}
   - component: {fileID: 292247197}
   m_Layer: 0
-  m_Name: Cube (2)
+  m_Name: Techo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -745,7 +745,7 @@ GameObject:
   - component: {fileID: 319097524}
   - component: {fileID: 319097523}
   m_Layer: 0
-  m_Name: Cube (1)
+  m_Name: Pared 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -836,7 +836,7 @@ GameObject:
   - component: {fileID: 429820523}
   - component: {fileID: 429820522}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Pared 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -973,7 +973,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 384, y: 300}
+  m_AnchoredPosition: {x: 384, y: 175.6}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &534274189
@@ -1384,7 +1384,7 @@ GameObject:
   - component: {fileID: 751687422}
   - component: {fileID: 751687421}
   m_Layer: 0
-  m_Name: Cube (24)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1475,7 +1475,7 @@ GameObject:
   - component: {fileID: 792482151}
   - component: {fileID: 792482150}
   m_Layer: 0
-  m_Name: Cube (25)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1635,7 +1635,7 @@ GameObject:
   - component: {fileID: 869792684}
   - component: {fileID: 869792683}
   m_Layer: 0
-  m_Name: Cube (16)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1726,7 +1726,7 @@ GameObject:
   - component: {fileID: 877436803}
   - component: {fileID: 877436802}
   m_Layer: 0
-  m_Name: Cube (19)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1838,7 +1838,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -294, y: 204}
+  m_AnchoredPosition: {x: -294, y: 103.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &896072961
@@ -1887,8 +1887,8 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 100
-  m_fontSizeBase: 100
+  m_fontSize: 60
+  m_fontSizeBase: 60
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
@@ -1933,7 +1933,7 @@ MonoBehaviour:
     spaceCount: 6
     wordCount: 6
     linkCount: 0
-    lineCount: 4
+    lineCount: 3
     pageCount: 1
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
@@ -1991,7 +1991,7 @@ GameObject:
   - component: {fileID: 935476766}
   - component: {fileID: 935476765}
   m_Layer: 0
-  m_Name: Cube (23)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2173,7 +2173,7 @@ GameObject:
   - component: {fileID: 1027200502}
   - component: {fileID: 1027200501}
   m_Layer: 0
-  m_Name: Cube (20)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2404,7 +2404,7 @@ GameObject:
   - component: {fileID: 1461365355}
   - component: {fileID: 1461365354}
   m_Layer: 0
-  m_Name: Cube (9)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2641,7 +2641,7 @@ GameObject:
   - component: {fileID: 1724627635}
   - component: {fileID: 1724627634}
   m_Layer: 0
-  m_Name: Cube (10)
+  m_Name: Pared
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2732,7 +2732,7 @@ GameObject:
   - component: {fileID: 1766581735}
   - component: {fileID: 1766581734}
   m_Layer: 0
-  m_Name: Cube (21)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2996,7 +2996,7 @@ GameObject:
   - component: {fileID: 1772482834}
   - component: {fileID: 1772482833}
   m_Layer: 0
-  m_Name: Cube (11)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3087,7 +3087,7 @@ GameObject:
   - component: {fileID: 1871116438}
   - component: {fileID: 1871116437}
   m_Layer: 0
-  m_Name: Cube (17)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3199,7 +3199,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -263, y: 303}
+  m_AnchoredPosition: {x: -263, y: 172.8}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1914653738
@@ -3333,7 +3333,7 @@ GameObject:
   - component: {fileID: 1917751279}
   - component: {fileID: 1917751278}
   m_Layer: 0
-  m_Name: Cube (22)
+  m_Name: Puerta
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
