@@ -1,19 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     public float timer = 60;
-
     public UIManager ui;
 
-    bool juegoTerminado = false;
+    private bool juegoTerminado = false;
 
     void Start()
     {
         Time.timeScale = 1;
+        juegoTerminado = false;
+
+        if (ui != null)
+        {
+            ui.UpdateTimer(timer);
+        }
     }
 
     void Update()
@@ -22,24 +25,25 @@ public class GameManager : MonoBehaviour
         {
             timer -= Time.deltaTime;
 
-            ui.UpdateTimer(timer);
-
             if (timer <= 0)
             {
                 timer = 0;
+                juegoTerminado = true;
 
                 ui.UpdateTimer(timer);
-
                 ui.MostrarPantallaGameOver();
-
-                juegoTerminado = true;
 
                 Time.timeScale = 0;
             }
+            else
+            {
+                ui.UpdateTimer(timer);
+            }
         }
 
-        if (juegoTerminado && Input.GetKeyDown(KeyCode.R))
+        if (Input.GetKeyDown(KeyCode.R))
         {
+            Time.timeScale = 1;
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
     }

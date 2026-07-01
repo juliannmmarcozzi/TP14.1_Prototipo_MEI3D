@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 using TMPro;
 
 public class UIManager : MonoBehaviour
@@ -11,14 +9,29 @@ public class UIManager : MonoBehaviour
     public GameObject panelWin;
     public GameObject panelGameOver;
 
+    void Start()
+    {
+        UpdateScore(0);
+
+        if (panelWin != null)
+        {
+            panelWin.SetActive(false);
+        }
+
+        if (panelGameOver != null)
+        {
+            panelGameOver.SetActive(false);
+        }
+    }
+
     public void UpdateScore(int score)
     {
-        scoreText.text = "Score: " + score;
+        scoreText.text = "Score: " + score.ToString();
     }
 
     public void UpdateTimer(float timer)
     {
-        timerText.text = "00:" + (int)timer;
+        timerText.text = "00:" + Mathf.CeilToInt(timer).ToString("00");
     }
 
     public void MostrarPantallaWin()

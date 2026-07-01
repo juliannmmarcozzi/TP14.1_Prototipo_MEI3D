@@ -1,33 +1,58 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Recolector : MonoBehaviour
 {
-    int contador = 0;
-
     public UIManager ui;
+    public int puntajeMaximo = 3;
 
-    public int puntajeMaximo = 2;
+    private int contador = 0;
+    private bool juegoGanado = false;
+
+    void Start()
+    {
+        contador = 0;
+        juegoGanado = false;
+
+        if (ui != null)
+        {
+            ui.UpdateScore(contador);
+        }
+    }
 
     void OnTriggerEnter(Collider objeto)
     {
-        if (objeto.tag == "Coleccionable")
+        if (juegoGanado) return;
+
+        if (objeto.CompareTag("Coleccionable"))
         {
-            Destroy(objeto.gameObject);
+            objeto.tag = "Untagged";
 
             contador++;
 
-            ui.UpdateScore(contador);
+            Debug.Log("Agarré: " + objeto.name + " | Contador: " + contador + " / Maximo: " + puntajeMaximo);
+
+            if (ui != null)
+            {
+                ui.UpdateScore(contador);
+            }
+            else
+            {
+                Debug.LogError("FALTA ASIGNAR UI MANAGER EN EL FPSCONTROLLER");
+            }
+
+            Destroy(objeto.gameObject);
 
             if (contador >= puntajeMaximo)
             {
-                ui.MostrarPantallaWin();
+                juegoGanado = true;
+
+                if (ui != null)
+                {
+                    ui.MostrarPantallaWin();
+                }
 
                 Time.timeScale = 0;
             }
-
-            Debug.Log(contador);
         }
     }
 }
