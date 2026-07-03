@@ -29,7 +29,7 @@ public class Recolector : MonoBehaviour
 
             contador++;
 
-            Debug.Log("Agarré: " + objeto.name + " | Contador: " + contador + " / Maximo: " + puntajeMaximo);
+            Debug.Log(contador);
 
             if (ui != null)
             {
