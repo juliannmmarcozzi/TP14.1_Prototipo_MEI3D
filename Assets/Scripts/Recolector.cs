@@ -3,7 +3,7 @@
 public class Recolector : MonoBehaviour
 {
     public UIManager ui;
-    public int puntajeMaximo = 3;
+    public int puntajeMaximo = 5;
 
     private int contador = 0;
     private bool juegoGanado = false;
@@ -34,10 +34,6 @@ public class Recolector : MonoBehaviour
             if (ui != null)
             {
                 ui.UpdateScore(contador);
-            }
-            else
-            {
-                Debug.LogError("FALTA ASIGNAR UI MANAGER EN EL FPSCONTROLLER");
             }
 
             Destroy(objeto.gameObject);
